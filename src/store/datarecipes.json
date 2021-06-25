@@ -1,0 +1,256 @@
+[
+    {
+        "editable": false,
+        "titre": "Pain de seigle",
+        "poolish": false,
+        "petrissage": "Petrissage direct",
+        "pieces": [
+            {
+                "nombre": 1,
+                "titre": "batard",
+                "poid": 350
+            },
+            {
+                "nombre": 2,
+                "titre": "boule",
+                "poid": 300
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine Rex Seigle",
+                "quantite": 1000 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 680 
+            },
+            {
+                "nom": "levure",
+                "quantite": 20 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain Courant",
+        "poolish": false,
+        "petrissage": "Petrissage direct",
+        "pieces": [
+            {
+                "nombre": 1,
+                "titre": "Pain",
+                "poid": 550
+            },
+            {
+                "nombre": 2,
+                "titre": "Baguette",
+                "poid": 350
+            },
+            {
+                "nombre": 2,
+                "titre": "Batard long",
+                "poid": 350
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine T55",
+                "quantite": 1000 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 600 
+            },
+            {
+                "nom": "Sel",
+                "quantite": 18 
+            },
+            {
+                "nom": "levure",
+                "quantite": 20 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain complet",
+        "poolish": false,
+        "petrissage": "Petrissage direct",
+        "pieces": [
+            {
+                "nombre": 2,
+                "titre": "Batârd court",
+                "poid": 300
+            },
+            {
+                "nombre": 2,
+                "titre": "Batârd moyen",
+                "poid": 400
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine Rex Complete (T 150)",
+                "quantite": 1000
+            },
+            {
+                "nom": "Farine T55",
+                "quantite": 500 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 875 
+            },
+            {
+                "nom": "Levure",
+                "quantite": 30 
+            },
+            {
+                "nom": "Poudre à lait",
+                "quantite": 85 
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 50 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain au lait",
+        "poolish": false,
+        "petrissage": "Petrissage direct",
+        "pieces": [
+            {
+                "nombre": 10,
+                "titre": "Pain au lait",
+                "poid": 80
+            },
+            {
+                "nombre": 1,
+                "titre": "Tresse",
+                "poid": 300
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine de gruau",
+                "quantite": 1000
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 120 
+            },
+            {
+                "nom": "sel",
+                "quantite": 20 
+            },
+            {
+                "nom": "levure",
+                "quantite": 20 
+            },
+            {
+                "nom": "Oeuf",
+                "quantite": 200 
+            },
+            {
+                "nom": "eau",
+                "quantite": 360 
+            },
+            {
+                "nom": "Poudre à lait",
+                "quantite": 40 
+            },
+            {
+                "nom": "beurre",
+                "quantite": 200 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain courant sur autolyse",
+        "poolish": true,
+        "petrissage": "Petrissage direct",
+        "pieces": [
+            {
+                "nombre": 2,
+                "titre": "Baguette",
+                "poid": 300
+            },
+            {
+                "nombre": 2,
+                "titre": "Baguette",
+                "poid": 350
+            },
+            {
+                "nombre": 1,
+                "titre": "Pain",
+                "poid": 500
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine T65",
+                "quantite": 1000
+            },
+            {
+                "nom": "Eau",
+                "quantite": 680 
+            },
+            {
+                "nom": "sel",
+                "quantite": 18 
+            },
+            {
+                "nom": "levure",
+                "quantite": 12 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain de campagne",
+        "poolish": false,
+        "petrissage": "Petrissage indirect",
+        "pieces": [
+            {
+                "nombre": 2,
+                "titre": "Couronnes",
+                "poid": 400
+            },
+            {
+                "nombre": 2,
+                "titre": "Tabatière",
+                "poid": 300
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine T55",
+                "quantite": 800
+            },
+            {
+                "nom": "Farine Rex Seigle",
+                "quantite": 200
+            },
+            {
+                "nom": "Eau",
+                "quantite": 650 
+            },
+            {
+                "nom": "sel",
+                "quantite": 16 
+            },
+            {
+                "nom": "levure",
+                "quantite": 10
+            },
+            {
+                "nom": "levain",
+                "quantite": 418 
+            }
+        ]
+    }
+]
