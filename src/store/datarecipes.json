@@ -4,6 +4,8 @@
         "titre": "Pain de seigle",
         "poolish": false,
         "petrissage": "Petrissage direct",
+        "tbase": 62,
+        "tpate": 25,
         "pieces": [
             {
                 "nombre": 1,
@@ -250,6 +252,61 @@
             {
                 "nom": "levain",
                 "quantite": 418 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pate à croissant",
+        "poolish": false,
+        "petrissage": "Petrissage indirect",
+        "pieces": [
+            {
+                "nombre": 12,
+                "titre": "Croissants",
+                "poid": 70
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine de gruau",
+                "quantite": 500
+            },
+            {
+                "nom": "Farine T65",
+                "quantite": 500
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 120 
+            },
+            {
+                "nom": "Sel",
+                "quantite": 20 
+            },
+            {
+                "nom": "levure",
+                "quantite": 20
+            },
+            {
+                "nom": "Pâte fermentée",
+                "quantite": 200 
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 100 
+            },
+            {
+                "nom": "eau",
+                "quantite": 560 
+            },
+            {
+                "nom": "Poudre à lait",
+                "quantite": 70 
+            },
+            {
+                "nom": "Beurre sec",
+                "quantite": 796 
             }
         ]
     }

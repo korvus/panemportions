@@ -125,3 +125,22 @@ fieldset label {
     padding-top: 4px;
     cursor: pointer;
 }
+
+
+
+@media screen and (max-width: 900px){
+    .recipe {
+        margin-bottom: 10px;
+    }
+    
+    .recipe span b {
+        display: block;
+        clear: both;
+    }
+
+    .formAddPrd {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+  

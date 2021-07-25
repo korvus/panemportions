@@ -10,7 +10,7 @@ const Firstcol = ({isPoolish, percentLevain}) => {
     }
     if(percentLevain > 0){
         return <Fragment>
-        <div className="base">Petrain</div>
+        <div className="base">Levain</div>
         <div className="base">Pétrissée</div>
       </Fragment>
     }

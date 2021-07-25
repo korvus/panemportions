@@ -16,8 +16,8 @@ body{
   display: none;
 }
 
-@media all and (max-width:677px){
+@media screen and (max-width: 900px){
   section {
-      padding: 0 1rem;
+      padding: 0;
   }
 }

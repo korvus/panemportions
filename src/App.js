@@ -7,9 +7,9 @@ import Home from "./components/home.js";
 
 function App() {
   return (
-      <PanemContextProvider>
-        <Home />
-      </PanemContextProvider>
+    <PanemContextProvider>
+      <Home />
+    </PanemContextProvider>
   );
 }
 

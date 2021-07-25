@@ -3,13 +3,13 @@ import { PanemContext } from "../store/centralrecipes";
 import '../style/styleIngredients.css';
 import QuantiteParIngredients from "./ingredients/pesee";
 import Entete from "./ingredients/header";
+import { roundTo, levainDetector, viennoiserieDetector } from "./functions.js";
 
 const farineDetector = new RegExp(/farine/im);
 const eauDetector = new RegExp(/eau/im);
 const levureDetector = new RegExp(/levure/im);
-const levainDetector = new RegExp(/levain/im);
 
-const roundTo = (value, decimals = 2) => Math.round(value * 10 ** decimals) / 10 ** decimals
+// const roundTo = (value, decimals = 2) => Math.round(value * 10 ** decimals) / 10 ** decimals
 
 const Ingredients = () => {
 
@@ -24,6 +24,7 @@ const Ingredients = () => {
     const [percentHydra, setPercentHydra] = useState(0);
     const [percentLevain, setPercentLevain] = useState(0);
     const [addIgrd, setAddIgrd] = useState(false);
+    const [detrempe, setDetrempe] = useState(0);
 
     const getWithcoef = (base) => {
       return roundTo(base*coef, 1);
@@ -71,7 +72,7 @@ const Ingredients = () => {
           return null;
         }
       );
-      setWeightPetrisse(roundTo(somme*coef));
+      setWeightPetrisse(roundTo(somme*coef, 0));
       return somme;
     }, [qtt, coef])
 
@@ -99,7 +100,7 @@ const Ingredients = () => {
     const displayPercentLevain = useCallback(() => {
       const levainQtt = qtt.ingredientsbase.find(el => levainDetector.test(el.nom));
       if(levainQtt !== undefined){
-        const levainPourcentage = roundTo(levainQtt.quantite*100/totalRecetteBase, 0);
+        const levainPourcentage = roundTo(levainQtt.quantite*100/(totalRecetteBase-levainQtt.quantite), 0);
         setPercentLevain(levainPourcentage);
       }
     }, [totalRecetteBase, qtt]);
@@ -124,8 +125,9 @@ const Ingredients = () => {
 
     const updateData = useCallback((quantite) => {
 
-      
       let levain = quantite.ingredientsbase.find(el => levainDetector.test(el.nom));
+      let viennoiserie = quantite.ingredientsbase.find(el => viennoiserieDetector.test(el.nom));
+      if(!viennoiserie) setDetrempe(0);
 
       // Si paramètre poolish, on calcul le pourcentage de chaque farine, et on en retire le pourcentage d'eau
       if(quantite.poolish){
@@ -184,6 +186,15 @@ const Ingredients = () => {
         setQtt(quantite);
         setHydra();
         displayPercentLevain();
+      }else if(viennoiserie){
+        const qttBeurreSec = quantite.ingredientsbase.find(el => viennoiserieDetector.test(el.nom)).quantite;
+        const poidProduitFinal = quantite.ingredientsbase.reduce((somme, ingredient) => {
+            return somme = somme + ingredient.quantite;
+        }, 0);
+        const poidDetrempe = poidProduitFinal - qttBeurreSec;
+        setDetrempe(poidDetrempe);
+        setQtt(quantite);
+        setHydra();
       } else {
         setPercentLevain(0);
         setQtt(quantite);
@@ -221,6 +232,38 @@ const Ingredients = () => {
       setNewWeight(parseInt(e.target.value));
     }
 
+    const FinTableauSecondCol = ({qtt, weightPoolish, weightPetrisse, percentLevain}) => {
+      if(qtt.poolish){
+        return <Fragment>
+          <div className="base">{weightPoolish}</div>
+          <div className="base">{weightPetrisse}</div>
+        </Fragment>
+      }
+      if(percentLevain > 0){
+        return <Fragment>
+          <div className="base">-</div>
+          <div className="base">{weightPetrisse}</div>
+        </Fragment>
+      }
+      return <div><b>{totaldemande}</b>gr</div>
+    }
+
+    const FinTableauFirstCol = ({qtt, totalRecettePoolish, totalRecettePetrisse}) => {
+      if(qtt.poolish){ 
+        return <Fragment>
+          <div className="base">{totalRecettePoolish}</div>
+          <div className="base">{totalRecettePetrisse}</div>
+        </Fragment>
+      }
+      if(percentLevain > 0){ 
+        return <Fragment>
+          <div className="base">-</div>
+          <div className="base">{totalRecetteBase}</div>
+        </Fragment>
+      }
+      return <div className="base"><b>{totalRecetteBase}</b>gr</div>
+    } 
+
     const setNewIngrd = () => {
       let newingredient = {
         "nom": newName,
@@ -237,32 +280,22 @@ const Ingredients = () => {
         <section>
           <div className="ingredients">
             <div className="poolish">
-              <label htmlFor="poolish">Poolish</label>
-              <input id="poolish" checked={qtt.poolish} type="checkbox" onChange={() => togglePoolish(qtt.poolish)} />
+              {detrempe === 0 && <Fragment>
+                  <label htmlFor="poolish">Poolish</label>
+                  <input id="poolish" checked={qtt.poolish} type="checkbox" onChange={() => togglePoolish(qtt.poolish)} />
+                </Fragment>
+              }
             </div>
             <ul>
               <Entete isPoolish={qtt.poolish} percentLevain={percentLevain} />
               {qtt.ingredientsbase.map((ingredient, i) => (
-                <QuantiteParIngredients hydra={percentHydra} key={i} iteration={i} isPoolish={qtt.poolish} coef={coef} ingredient={ingredient} fonctions={{getWithcoef, suppr}} />
+                <QuantiteParIngredients detrempe={detrempe} percentLevain={percentLevain} hydra={percentHydra} key={i} iteration={i} isPoolish={qtt.poolish} coef={coef} ingredient={ingredient} fonctions={{getWithcoef, suppr}} />
               ))}
-                <li>
+                <li className="total">
                     <label>Total</label>
-                    {qtt.poolish ? 
-                      <Fragment>
-                        <div className="base">{totalRecettePoolish}</div>
-                        <div className="base">{totalRecettePetrisse}</div>
-                      </Fragment> :
-                      <div className="base"><b>{totalRecetteBase}</b>gr</div>
-                    }
-                    
+                    <FinTableauFirstCol percentLevain={percentLevain} qtt={qtt} totalRecettePoolish={totalRecettePoolish} totalRecettePetrisse={totalRecettePetrisse} />
                     <div className="coef">{coef}</div>
-                    {qtt.poolish ? 
-                      <Fragment>
-                        <div className="base">{weightPoolish}</div>
-                        <div className="base">{weightPetrisse}</div>
-                      </Fragment> : 
-                      <div><b>{totaldemande}</b>gr</div>
-                    }
+                    <FinTableauSecondCol percentLevain={percentLevain} qtt={qtt} weightPoolish={weightPoolish} weightPetrisse={weightPetrisse} />
                 </li>
                 <li className={`${addIgrd ? 'hide' : 'addIngredient'}`}>
                   <div>
@@ -281,13 +314,13 @@ const Ingredients = () => {
                 </fieldset>
                 <fieldset>
                     <label>Poid dans la recette de base (pour 1000gr de farine)</label>
-                        <input value={newWeight} type="number" id="poid" onChange={handleNewWeight}>
+                      <input value={newWeight} type="number" id="poid" onChange={handleNewWeight}>
                     </input>
                 </fieldset>
                 <input onClick={() => setNewIngrd()} type="submit" className="submit" value="Ajouter" />
                 <span onClick={() => setAddIgrd(false)}>Annuler</span>
             </div>
-
+                
             </div>
         </section>
       )}

@@ -11,6 +11,16 @@
     background: #fff;
 }
 
+.ingredients ul li.detrempe {
+    background: #ccc;
+    border-top: 1px solid #000;
+}
+
+.ingredients ul li.total {
+    border: 1px solid #000;
+    background: #eee;
+}
+
 .ingredients ul li.header {
     border-bottom: 1px solid #000;
     background: #cac1ad;
@@ -60,3 +70,15 @@
     display: flex;
     vertical-align: middle;
 }
+
+@media screen and (max-width: 900px){
+    .ingredients {
+        width: auto;
+    }
+
+    .ingredients ul {
+        padding: 0;
+        width: 100%;
+    }
+  }
+  

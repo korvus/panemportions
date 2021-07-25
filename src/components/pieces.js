@@ -90,8 +90,8 @@ const Pieces = () => {
                   }gr `}
                   → {multiplication(piece.nombre, piece.poid)}gr
                   <button onClick={() => suppr(piece)} className="supprimer" title="retirer de la liste des produits">
-                      <img width="15" src={trashIcon} alt="supprimer"/>
-                    </button>
+                    <img width="15" src={trashIcon} alt="supprimer"/>
+                  </button>
                 </li>
               ))}
               <li className="total">
@@ -105,7 +105,7 @@ const Pieces = () => {
                 </button>→ <b className="poidTotal">{multiplication(portions, total)}</b>gr
               </li>
               <li className={`${addPrd ? 'hide' : 'nopuce'}`}>
-                  <button onClick={() => addPiece()} className="ajouterIngredients">Ajouter un ingrédient</button>
+                  <button onClick={() => addPiece()} className="ajouterIngredients">Ajouter une pièce</button>
               </li>
             </ul>
             <div className={`formAddPrd ${addPrd ? '' : 'hide'}`}>
