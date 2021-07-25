@@ -29,12 +29,6 @@ const Temperature = () => {
         if(rdbase === undefined) setTBase(undefined);
     }
 
-    const calculTeau = () => {
-        const tmpBase = tBase === undefined ? 0 : tBase 
-        const o = tmpBase - (tFarine + tFournil);
-        setTEau(o);
-    }
-
     const changeTFournil = (degre, direction) => {
         const temperature = degre + direction;
         setTFournil(temperature);
@@ -46,6 +40,11 @@ const Temperature = () => {
     };
 
     useEffect(() => {
+            const calculTeau = () => {
+                const tmpBase = tBase === undefined ? 0 : tBase 
+                const o = tmpBase - (tFarine + tFournil);
+                setTEau(o);
+            }
             calculTeau();
         }, [tBase, tFarine, tFournil]
     );
