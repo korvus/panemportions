@@ -85,10 +85,11 @@ const Pieces = () => {
                   <button onClick={() => changeQtt(piece, -1)}>-</button>
                   <b>{piece.nombre}</b>
                   <button onClick={() => changeQtt(piece, 1)}>+</button>
-                  {` ${piece.titre}${piece.nombre > 1 ? "s" : ""} de ${
-                    piece.poid
-                  }gr `}
-                  → {multiplication(piece.nombre, piece.poid)}gr
+                  <span>{`${piece.titre}${piece.nombre > 1 ? "s" : ""} de ${
+                      piece.poid
+                    }gr `}
+                    → {multiplication(piece.nombre, piece.poid)}gr
+                  </span>
                   <button onClick={() => suppr(piece)} className="supprimer" title="retirer de la liste des produits">
                     <img width="15" src={trashIcon} alt="supprimer"/>
                   </button>

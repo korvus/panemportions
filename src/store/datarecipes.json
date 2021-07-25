@@ -37,6 +37,8 @@
         "editable": false,
         "titre": "Pain Courant",
         "poolish": false,
+        "tbase": 58,
+        "tpate": 23,
         "petrissage": "Petrissage direct",
         "pieces": [
             {
@@ -79,6 +81,8 @@
         "titre": "Pain complet",
         "poolish": false,
         "petrissage": "Petrissage direct",
+        "tbase": 65,
+        "tpate": 24,
         "pieces": [
             {
                 "nombre": 2,
@@ -122,6 +126,8 @@
         "editable": false,
         "titre": "Pain au lait",
         "poolish": false,
+        "tbase": 48,
+        "tpate": 23,
         "petrissage": "Petrissage direct",
         "pieces": [
             {
@@ -174,6 +180,8 @@
         "editable": false,
         "titre": "Pain courant sur autolyse",
         "poolish": true,
+        "tbase": 62,
+        "tpate": 23,
         "petrissage": "Petrissage direct",
         "pieces": [
             {
@@ -214,6 +222,8 @@
     {
         "editable": false,
         "titre": "Pain de campagne",
+        "tbase": 60,
+        "tpate": 25,
         "poolish": false,
         "petrissage": "Petrissage indirect",
         "pieces": [
@@ -258,6 +268,8 @@
     {
         "editable": false,
         "titre": "Pate à croissant",
+        "tbase": 48,
+        "tpate": 23,
         "poolish": false,
         "petrissage": "Petrissage indirect",
         "pieces": [
@@ -307,6 +319,60 @@
             {
                 "nom": "Beurre sec",
                 "quantite": 796 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain viennois",
+        "poolish": false,
+        "tbase": 48,
+        "tpate": 23,
+        "petrissage": "Petrissage amélioré",
+        "pieces": [
+            {
+                "nombre": 2,
+                "titre": "demi viennoise nature",
+                "poid": 180
+            },
+            {
+                "nombre": 3,
+                "titre": "demi viennoise pépite chocolat",
+                "poid": 180
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine Gruau",
+                "quantite": 1000
+            },
+            {
+                "nom": "sucre",
+                "quantite": 60 
+            },
+            {
+                "nom": "sel",
+                "quantite": 20 
+            },
+            {
+                "nom": "levure",
+                "quantite": 20 
+            },
+            {
+                "nom": "oeufs",
+                "quantite": 100 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 430 
+            },
+            {
+                "nom": "Poudre à lait",
+                "quantite": 50 
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 100 
             }
         ]
     }
