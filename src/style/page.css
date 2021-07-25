@@ -126,6 +126,9 @@ fieldset label {
     cursor: pointer;
 }
 
+.pieces span {
+    padding: 5px 0 5px 5px;
+}
 
 
 @media screen and (max-width: 900px){
@@ -141,10 +144,6 @@ fieldset label {
     .formAddPrd {
         padding-top: 10px;
         padding-bottom: 10px;
-    }
-
-    .pieces span {
-        padding: 5px 0 5px 5px;
     }
 
     div.pieces ul{
