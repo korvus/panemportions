@@ -41,7 +41,8 @@ const Pieces = () => {
   const suppr = (piece) => {
     for (var i = 0; i < qtt.pieces.length; i++) {
         if (qtt.pieces[i].titre === piece.titre) {
-          delete qtt.pieces[i];
+          qtt.pieces.splice(i, 1);
+          // delete qtt.pieces[i];
           break;
         }
       }
@@ -85,7 +86,7 @@ const Pieces = () => {
                   <button onClick={() => changeQtt(piece, -1)}>-</button>
                   <b>{piece.nombre}</b>
                   <button onClick={() => changeQtt(piece, 1)}>+</button>
-                  <span>{`${piece.titre}${piece.nombre > 1 ? "s" : ""} de ${
+                  <span>{`${piece.titre} de ${
                       piece.poid
                     }gr `}
                     → {multiplication(piece.nombre, piece.poid)}gr

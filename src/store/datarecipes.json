@@ -35,7 +35,53 @@
     },
     {
         "editable": false,
-        "titre": "Pain Courant",
+        "titre": "Pain de seigle au levain",
+        "poolish": false,
+        "petrissage": "Petrissage intensifié - 1ere vitesse 3 minute - 5 a 8 minutes en 2éme vitesse",
+        "tbase": 62,
+        "tpate": 25,
+        "pieces": [
+            {
+                "nombre": 1,
+                "titre": "batard",
+                "poid": 350
+            },
+            {
+                "nombre": 2,
+                "titre": "boule",
+                "poid": 300
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine T 65",
+                "quantite": 250 
+            },
+            {
+                "nom": "Farine Rex Seigle",
+                "quantite": 800 
+            },
+            {
+                "nom": "Sel",
+                "quantite": 5 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 650 
+            },
+            {
+                "nom": "levure",
+                "quantite": 6 
+            },
+            {
+                "nom": "levain",
+                "quantite": 300 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain courant",
         "poolish": false,
         "tbase": 58,
         "tpate": 23,
@@ -119,6 +165,137 @@
             {
                 "nom": "Beurre",
                 "quantite": 50 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain complet simple",
+        "poolish": false,
+        "tbase": 62,
+        "tpate": 24,
+        "petrissage": "Petrissage amélioré (1ére vitesse 3 a 5 min > 2éme vitesse : 5 à 8 minutes",
+        "pieces": [
+            {
+                "nombre": 2,
+                "titre": "Pain carrés",
+                "poid": 300
+            },
+            {
+                "nombre": 2,
+                "titre": "Boules",
+                "poid": 250
+            },
+            {
+                "nombre": 1,
+                "titre": "Torsade",
+                "poid": 350
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine T65",
+                "quantite": 500 
+            },
+            {
+                "nom": "Farine Complete Rex",
+                "quantite": 1000 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 975 
+            },
+            {
+                "nom": "levure",
+                "quantite": 20 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain bis",
+        "poolish": false,
+        "tbase": 58,
+        "tpate": 23,
+        "petrissage": "Petrissage amélioré (1ére vitesse 3min > Autolyse 1h > 1ére vitesse 2 minutes > 2éme vitesse : 5minutes",
+        "pieces": [
+            {
+                "nombre": 2,
+                "titre": "Marguerite",
+                "poid": 350
+            },
+            {
+                "nombre": 2,
+                "titre": "Tabattières",
+                "poid": 300
+            },
+            {
+                "nombre": 1,
+                "titre": "Auvergnat",
+                "poid": 400
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine T65",
+                "quantite": 1000 
+            },
+            {
+                "nom": "Farine Complete Rex",
+                "quantite": 1000 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 1300 
+            },
+            {
+                "nom": "levure",
+                "quantite": 12 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain de mie",
+        "poolish": false,
+        "tbase": 48,
+        "tpate": 24,
+        "petrissage": "Petrissage intensifié (1ére vitesse 3min > 2éme vitesse : 8/10 minutes",
+        "pieces": [
+            {
+                "nombre": 5,
+                "titre": "Pain de mie",
+                "poid": 300
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine Gruau",
+                "quantite": 1000 
+            },
+            {
+                "nom": "Sel",
+                "quantite": 20 
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 50 
+            },
+            {
+                "nom": "Poudre à lait",
+                "quantite": 40 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 600 
+            },
+            {
+                "nom": "Levure",
+                "quantite": 20 
+            },
+            {
+                "nom": "Pâte fermentée",
+                "quantite": 200 
             }
         ]
     },
@@ -319,6 +496,49 @@
             {
                 "nom": "Beurre sec",
                 "quantite": 796 
+            }
+        ]
+    },
+    {
+        "editable": false,
+        "titre": "Pain de tradition",
+        "poolish": false,
+        "tbase": 58,
+        "tpate": 23,
+        "petrissage": "Petrissage amélioré > 3min + Autolyse 1h + 2min + 5min",
+        "pieces": [
+            {
+                "nombre": 2,
+                "titre": "Baguette",
+                "poid": 300
+            },
+            {
+                "nombre": 2,
+                "titre": "Baguette longue",
+                "poid": 350
+            },
+            {
+                "nombre": 1,
+                "titre": "Pain",
+                "poid": 500
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine de tradition",
+                "quantite": 1000
+            },
+            {
+                "nom": "Eau",
+                "quantite": 700 
+            },
+            {
+                "nom": "sel",
+                "quantite": 18 
+            },
+            {
+                "nom": "levure",
+                "quantite": 18 
             }
         ]
     },
