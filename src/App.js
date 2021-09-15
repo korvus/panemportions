@@ -3,13 +3,16 @@ import "./style/main.css";
 import "./style/page.css";
 
 import { PanemContextProvider } from "./store/centralrecipes.js";
+import { BrowserRouter } from "react-router-dom";
 import Home from "./components/home.js";
 
 function App() {
   return (
-    <PanemContextProvider>
-      <Home />
-    </PanemContextProvider>
+    <BrowserRouter>
+      <PanemContextProvider>
+        <Home />
+      </PanemContextProvider>
+    </BrowserRouter>
   );
 }
 

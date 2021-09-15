@@ -398,7 +398,7 @@
     },
     {
         "editable": false,
-        "titre": "Pain de campagne",
+        "titre": "Pain de campagne sur levain",
         "tbase": 60,
         "tpate": 25,
         "poolish": false,
@@ -595,5 +595,151 @@
                 "quantite": 100 
             }
         ]
+    },{
+        "editable": false,
+        "titre": "Pain au cacao",
+        "poolish": false,
+        "tbase": 58,
+        "tpate": 24,
+        "petrissage": "Petrissage amélioré",
+        "pieces": [
+            {
+                "nombre": 6,
+                "titre": "boules",
+                "poid": 60
+            },
+            {
+                "nombre": 10,
+                "titre": "Pains",
+                "poid": 80
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine Gruau",
+                "quantite": 500
+            },
+            {
+                "nom": "Farine T65",
+                "quantite": 500 
+            },
+            {
+                "nom": "sel",
+                "quantite": 20 
+            },
+            {
+                "nom": "miel",
+                "quantite": 100 
+            },
+            {
+                "nom": "levure",
+                "quantite": 30 
+            },
+            {
+                "nom": "beurre",
+                "quantite": 200 
+            },
+            {
+                "nom": "Poudre à lait",
+                "quantite": 60 
+            },
+            {
+                "nom": "Poudre de cacao",
+                "quantite": 50 
+            },
+            {
+                "nom": "drops",
+                "quantite": 120 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 600 
+            }
+        ]
+    },{
+        "editable": false,
+        "titre": "Pain au miel",
+        "poolish": true,
+        "tbase": 58,
+        "tpate": 24,
+        "petrissage": "Petrissage amélioré",
+        "pieces": [
+            {
+                "nombre": 10,
+                "titre": "pain",
+                "poid": 500
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine T65",
+                "quantite": 10000 
+            },
+            {
+                "nom": "Farine Rex seigle",
+                "quantite": 5000 
+            },
+            {
+                "nom": "Pâte fermentée",
+                "quantite": 5500 
+            },
+            {
+                "nom": "miel",
+                "quantite": 750 
+            },
+            {
+                "nom": "sel",
+                "quantite": 180 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 7000 
+            }
+        ]
+    },{
+        "editable": false,
+        "titre": "Pain Aromatiques",
+        "poolish": true,
+        "tbase": 58,
+        "tpate": 24,
+        "petrissage": "Petrissage amélioré",
+        "pieces": [
+            {
+                "nombre": 10,
+                "titre": "pains",
+                "poid": 500
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine T65",
+                "quantite": 1000 
+            },
+            {
+                "nom": "Pâte fermentée",
+                "quantite": 300 
+            },
+            {
+                "nom": "levure",
+                "quantite": 6 
+            },
+            {
+                "nom": "sel",
+                "quantite": 18 
+            },
+            {
+                "nom": "Eau",
+                "quantite": 620 
+            },
+            {
+                "nom": "Huile",
+                "quantite": 60 
+            },
+            {
+                "nom": "Herbes de provence",
+                "quantite": 40 
+            }
+        ]
     }
+
 ]

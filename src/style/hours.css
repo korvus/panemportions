@@ -1,0 +1,20 @@
+.heures h2 {
+    margin: 0;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.selectHour div {
+    padding: 15px 0 20px 15px;
+    border-bottom: 1px solid #000;
+}
+
+.selectHour button {
+    background: transparent;
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
+.selectHour b {
+    padding: 0 10px;
+}

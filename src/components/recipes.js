@@ -16,7 +16,7 @@ const recipeInsideStorage = getAlreadyRegistred();
 
 const Recipes = () => {
 
-    const { setIndexSelected } = useContext(PanemContext);
+    const { setIndexSelected, indexSelected } = useContext(PanemContext);
 
     /* Just usefull for refresh the component when lang is changed */
     const [existing, setExisting] = useState(recipeInsideStorage);
@@ -39,7 +39,7 @@ const Recipes = () => {
         const title = `${existing[a].titre} :`;
 
           recipe.push(
-          <li className="recipe" key={a}>
+          <li className={`recipe${indexSelected === a ? " active" : " "}`} key={a}>
             <span data-index={a} role="presentation" onClick={() => {setIndexSelected(a)}} title={title} className="recipe">
                 <b>{existing[a].titre}</b> {
                     existing[a].pieces.map(piece => 

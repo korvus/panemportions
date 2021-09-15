@@ -7,7 +7,7 @@ import { roundTo, levainDetector, viennoiserieDetector } from "./functions.js";
 
 const farineDetector = new RegExp(/farine/im);
 const eauDetector = new RegExp(/eau/im);
-const levureDetector = new RegExp(/levure/im);
+const levureDetector = new RegExp(/levure|pâte fermentée/im);
 
 // const roundTo = (value, decimals = 2) => Math.round(value * 10 ** decimals) / 10 ** decimals
 

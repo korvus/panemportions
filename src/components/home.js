@@ -1,33 +1,24 @@
-import Recipes from "./recipes.js";
-import Pieces from "./pieces.js";
-import Ingredients from "./ingredients.js";
-import Petrissage from "./petrissage.js";
-import Temperature from "./temperature.js";
+import Proportions from "./proportions.js";
+import Organigramme from "./organigramme.js";
+import { Switch, Route } from "react-router-dom";
 // import { PanemContext } from "../store/recipes";
+import { PanemContextProvider } from "../store/selectedrecipes.js";
 
 function App() {
 
-    // const { indexSelected } = useContext(PanemContext);
-
     return (
-        <div className="App">
-        <section className="etalon">
-            <Recipes />
-        </section>
-        <section className="pieces">
-            <Pieces />
-        </section>
-        <section className="ingredients">
-            <Ingredients />
-        </section>
-        <section className="timing">
-            <Petrissage />
-        </section>
-        <section className="temperature">
-            <Temperature />
-        </section>
-        </div>
+        <Switch>
+            <Route path="/organigramme">
+                <PanemContextProvider>
+                    <Organigramme />
+                </PanemContextProvider>
+            </Route>
+            <Route path="/">
+                <Proportions />
+            </Route>
+        </Switch>
     );
+
 }
 
 export default App;

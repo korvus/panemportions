@@ -16,6 +16,11 @@
     vertical-align:middle;
 }
 
+.recipe.active span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .trash {
     cursor: pointer;
 }
