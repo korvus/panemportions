@@ -444,7 +444,7 @@
     },
     {
         "editable": false,
-        "titre": "Pate à croissant",
+        "titre": "Pate à croissant - V1",
         "tbase": 48,
         "tpate": 23,
         "poolish": false,
@@ -501,6 +501,59 @@
     },
     {
         "editable": false,
+        "titre": "Pate à croissant - V2",
+        "tbase": 48,
+        "tpate": 23,
+        "poolish": false,
+        "petrissage": "Petrissage indirect",
+        "pieces": [
+            {
+                "nombre": 12,
+                "titre": "Croissants",
+                "poid": 70
+            }
+        ],
+        "ingredientsbase": [
+            {
+                "nom": "Farine de gruau",
+                "quantite": 1000
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 130 
+            },
+            {
+                "nom": "Sel",
+                "quantite": 18 
+            },
+            {
+                "nom": "levure",
+                "quantite": 45
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 100 
+            },
+            {
+                "nom": "eau",
+                "quantite": 400 
+            },
+            {
+                "nom": "Oeufs",
+                "quantite": 100 
+            },
+            {
+                "nom": "Poudre à lait",
+                "quantite": 40 
+            },
+            {
+                "nom": "Beurre sec",
+                "quantite": 500 
+            }
+        ]
+    },
+    {
+        "editable": false,
         "titre": "Pain de tradition",
         "poolish": false,
         "tbase": 58,
@@ -544,7 +597,7 @@
     },
     {
         "editable": false,
-        "titre": "Pain viennois",
+        "titre": "Pain viennois - v1",
         "poolish": false,
         "tbase": 48,
         "tpate": 23,
@@ -596,6 +649,59 @@
             }
         ]
     },{
+            "editable": false,
+            "titre": "Pain viennois - V2",
+            "poolish": false,
+            "tbase": 48,
+            "tpate": 23,
+            "petrissage": "3 minutes frasage, 3 minutes soufflage, ajout du beurre, 3 minutes soufflage.",
+            "pieces": [
+                {
+                    "nombre": 2,
+                    "titre": "demi viennoise nature",
+                    "poid": 180
+                },
+                {
+                    "nombre": 3,
+                    "titre": "demi viennoise pépite chocolat",
+                    "poid": 180
+                }
+            ],
+            "ingredientsbase": [
+                {
+                    "nom": "Farine T45",
+                    "quantite": 1000
+                },
+                {
+                    "nom": "sucre",
+                    "quantite": 60 
+                },
+                {
+                    "nom": "sel",
+                    "quantite": 18 
+                },
+                {
+                    "nom": "levure",
+                    "quantite": 30 
+                },
+                {
+                    "nom": "oeufs",
+                    "quantite": 150 
+                },
+                {
+                    "nom": "Eau",
+                    "quantite": 480 
+                },
+                {
+                    "nom": "Poudre à lait",
+                    "quantite": 40 
+                },
+                {
+                    "nom": "Beurre",
+                    "quantite": 125 
+                }
+            ]
+        },{
         "editable": false,
         "titre": "Pain au cacao",
         "poolish": false,
